@@ -1,0 +1,104 @@
+.clients {
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+.clients__container {
+    max-width: 480px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    @media (min-width: 768px) {
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 768px;
+    }
+    @media (min-width: 1200px) {
+        max-width: 1200px;
+    }
+}
+.clients__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-family: $font-h;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 26px;
+    line-height: 1.15;
+    color: $hero-h;
+}
+.clients__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    @media (min-width: 768px) {
+        justify-content: space-between;
+    }
+    &--item {
+        margin-top: 30px;
+    }
+    &--name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        font-family: $font-h;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 20px;
+        line-height: 1.15;
+        color: $text-1;
+    }
+}
+.item__container {
+    width: 270px;
+}
+.client__sociallist {
+    display: flex;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+    justify-content: center;
+    align-items: center;
+
+    &--item:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &--item {
+        display: flex;
+    }
+}
+
+.client__sociallink {
+    box-sizing: border-box;
+    display: flex;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    color: $bg-hero;
+    background-color: $hero-h;
+    @include transition(color);
+    @include transition(background-color);
+    &:focus {
+        color: $bg-hero;
+        background-color: $focus;
+    }
+    &:hover {
+        color: $bg-hero;
+        background-color: $focus;
+    }
+}
+.client__icon {
+    display: flex;
+    fill: currentColor;
+}

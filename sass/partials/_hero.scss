@@ -1,0 +1,55 @@
+.hero {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    @media(max-width: 768px) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+.hero__container {
+    box-sizing: border-box;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-image: url(../img/hero-mob.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @media (min-width: 768px) {
+        max-width: 768px;
+        background-image: url(../img/hero-tab.png);
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @media (min-width: 1200px) {
+        max-width: 1200px;
+        background-image: url(../img/hero-desktop.png);
+    }
+}
+.hero__name {
+    margin-top: 10px;
+    font-family: $font-h;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 1.15;
+    color: $hero-h;
+}
+.hero__button {
+    margin-top: 50px;
+    margin-bottom: 220px;
+    padding: 7px;
+    border: 0px;
+    border-radius: 20px;
+    color: $bg-hero;
+    background-color: $hero-h;
+    @include transition(background-color);
+    &:hover {
+        background-color: $focus;
+    };
+    &:focus {
+        background-color: $focus;
+    };
+}

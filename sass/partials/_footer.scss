@@ -1,0 +1,83 @@
+.footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: $bg-footer;
+}
+.footer__container {
+    max-width: 480px;
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    @media (min-width: 768px) {
+        max-width: 768px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @media (min-width: 1200px) {
+        max-width: 1200px;
+    }
+}
+.footer__logo {
+    display: block;
+    font-family: $font-h;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.15;
+    color: $bg-hero;
+}
+.footer__logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.footer__adress-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.footer__sociallist {
+    display: flex;
+    margin-block-start: 30px;
+    margin-block-end: 30px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+    justify-content: center;
+    align-items: center;
+    &--item:not(:last-child) {
+        margin-right: 10px;
+    }
+    &--item {
+        display: flex;
+    }
+}
+.footer__sociallink {
+    box-sizing: border-box;
+    display: flex;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    color: $text-1;
+    background-color: $bg-hero;
+    @include transition(color);
+    @include transition(background-color);
+    &:focus {
+        color: $bg-hero;
+        background-color: $focus;
+    }
+    &:hover {
+        color: $bg-hero;
+        background-color: $focus;
+    }
+}
+.footer__icon {
+    display: flex;
+    fill: currentColor;
+}

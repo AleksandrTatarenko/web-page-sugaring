@@ -1,0 +1,141 @@
+.header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  &::after {
+      position: absolute;
+      content: '';
+      display: inline-block;
+      width: 100%;
+      border-bottom: solid 1px $border;
+      margin-top: 10px;
+      left: 0;
+    }
+    @media (min-width: 768px) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  
+}
+.header__container {
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 768px) {
+    max-width: 768px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}
+.header__nav {
+  display: flex;
+}
+.header__logo {
+  display: block;
+  margin-right: auto;
+  font-family: $font-h;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.15;
+  color: $text-1;
+  @media (min-width: 1200px) {
+    margin-right: 150px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+.header__list {
+  @media (min-width: 1200px) {
+    display: flex;
+  }
+}
+.header__list {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
+.header__link {
+  font-family: $font;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.15;
+  color: $hero-h;
+  @include transition(color);
+  &:focus {
+    color: $focus;
+  }
+  &:hover {
+    color: $focus;
+  }
+}
+.menu__list {
+  display: none;
+  @media (min-width: 1200px) {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+.menu__list--item {
+  margin-right: 20px;
+}
+.menu__list--item:last-child {
+  margin-right: 0;
+}
+.menu__link {
+  font-family: $font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.15;
+  color: $hero-h;
+  @include transition(color);
+  &:hover {
+    box-shadow: none;
+    cursor: pointer;
+    color: $focus;
+  }
+  &:focus {
+    box-shadow: none;
+    cursor: pointer;
+    color: $focus;
+  }
+}
+/*Мобильное меню*/
+.menu-toggle {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-height: 20px;
+  min-width: 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  @include transition(color);
+  &:hover {
+    box-shadow: none;
+    cursor: pointer;
+  }
+  &:focus {
+    box-shadow: none;
+    cursor: pointer;
+  }
+  @media (min-width: 768px) {
+    margin-right: 30px;
+  }
+  @media (min-width: 1200px) {
+    display: none;
+  }
+}
